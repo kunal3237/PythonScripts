@@ -1,6 +1,6 @@
 # PythonScripts
 
-Expected OutPut of the vpc-creation.py script
+Expected OutPut of the vpc-creation.py script 
 
 
 **************************************************
