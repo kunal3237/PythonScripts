@@ -4,7 +4,7 @@ Expected OutPut of the vpc-creation.py script
 
 
 **************************************************
-New VPC Created with VpcId: vpc-02************
+New VPC Created with VpcId: vpc-02************8
 Subnet created with SubnetId: subnet-03*************
 Subnet created with SubnetId: subnet-01************
 Subnet created with SubnetId: subnet-0f************
