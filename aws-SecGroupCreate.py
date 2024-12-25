@@ -1,3 +1,39 @@
+"""
+Expected output
+________________________________________________
+
+Security Group Created : sg-0**************
+Do you want to Define the rules for Security Group: y
+Please enter the CIDR, FromPort and ToPort
+CIDR, Please ( eg. 192.168.0.0/32): 0.0.0.0/0
+FromPort, Please : 80
+ToPort, Please : 80
+**************************************************
+Security Group Created : sg-*****************
+Is this egress Rule: False
+IP4 Address Allowed: 0.0.0.0/0
+From Port Allowed: 80
+To Port Allowed: 80
+VPC to which this SG is assocaiated : vpc-6*******
+**************************************************
+Do you want to add more Rules: ...y
+Please enter the CIDR, FromPort and ToPort
+CIDR, Please ( eg. 192.168.0.0/32): 0.0.0.0/0
+FromPort, Please : 8080
+ToPort, Please : 8080
+**************************************************
+Security Group Created : sg-0****************
+Is this egress Rule: False
+IP4 Address Allowed: 0.0.0.0/0
+From Port Allowed: 8080
+To Port Allowed: 8080
+VPC to which this SG is assocaiated : vpc-6*********
+**************************************************
+Do you want to add more Rules: ...n
+Thanks for using the script..
+
+"""
+
 import boto3
 import random
 
