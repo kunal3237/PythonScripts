@@ -1,3 +1,25 @@
+"""
+Expected Output
+________________________________________
+***** Checking the landing directory *****
+***** Changing current directory to /home/kunal *****
+***** Good to go for the backup, Backup Drectory aleady exists *****
+***** Listing the backupfolder---> /home/kunal *****
+total 16
+-rw-rw-r-- 1 kunal kunal 310 Dec 24 14:53 Try-py-2024-12-24-14-53-4.zip
+-rw-rw-r-- 1 kunal kunal 312 Dec 24 14:53 Try-py-2024-12-24-14-53-15.zip
+-rw-rw-r-- 1 kunal kunal 109 Dec 25 20:51 Try-py-2024-12-25-20-51-51
+-rw-rw-r-- 1 kunal kunal 312 Dec 25 20:51 Try-py-2024-12-25-20-51-51.zip
+
+Zipping file /home/kunal/backupwithpython/Try-py-2024-12-25-20-52-3 to /home/kunal/backupwithpython/Try-py-2024-12-25-20-52-3.zip
+***** Zip Process is complete *****
+Do you want to delete unzipped files...y
+entering the loop
+Deteing...,Try-py-2024-12-25-20-52-3
+Deteing...,Try-py-2024-12-25-20-51-51
+
+"""
+
 import os
 import os.path
 import subprocess
