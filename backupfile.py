@@ -1,5 +1,5 @@
 """
-Expected Output
+Expected Output 
 ________________________________________
 ***** Checking the landing directory *****
 ***** Changing current directory to /home/kunal *****
