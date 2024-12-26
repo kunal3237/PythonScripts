@@ -29,9 +29,6 @@ AmazonEC2ContainerRegistryReadOnly
 **************************************************
 """
 
-#To Check AWS user and their Privs and groups assigment
-# Author : Kunal Sharma
-
 import boto3
 client_iam=boto3.client('iam')
 
@@ -90,18 +87,7 @@ def user_group_list():
                         
                         print(k['PolicyName'])    
         print('-'*50)                    
-            #print(group_set)                
-                    # group_name=j['GroupName']
-                    # print("*"*50)
-                    # print(f"Group : {group_name} Attached Policies")
-                    # print("*"*50)
-                    # response_group_policies = client_iam.list_attached_group_policies(
-                    #                 GroupName=group_name,
-                    #                 )
-                    # for k in response_group_policies['AttachedPolicies']:
-                    #     print(k['PolicyName'])
-                        
-                    #print(f"{j} : {response_group_policies['PolicyName']}")      
+            
 
 def main():
    userlist_policy_check()
@@ -115,6 +101,8 @@ print('List of users with attached direct policies')
 print("*"*50)   
 main()    
 print("*"*50)
+
+
 
 
 
