@@ -42,7 +42,7 @@ json_data=\"""{
 
 import requests 
 import json
-import datetime
+import time
 
 class Weather_check():
     def __init__(self,url):
@@ -64,7 +64,7 @@ print(check_weather.weather_display())
                 
 # #url="https://jsonplaceholder.typicode.com/posts/1/comments"
 
-datetime.sleep(120)
+time.sleep(120)
 
 
 
