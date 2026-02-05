@@ -64,3 +64,43 @@ def funx1():
   return f'This is a funtion without parameter'
 funx1()  
 funx1.__doc__
+#####################################################################
+x=7
+def funscope():
+  """varaibles in the local scope will be called, Global scope has least privlies, Scope 
+  works on LEGB (Local/enclosed/Glabal/builtnin)"""
+  x=5
+  return x
+funscope()
+###########################################################################
+def funscope1():
+  """ We can view/use the global varaible But can't modify the global variable"""
+  return x
+
+funscope1()  
+
+#######################################def funscope2():
+  
+  #global x
+  x=5
+  return x
+funscope2()  
+print(x)      #### This will throw errror as scope of the variable was limited to local scope, So we will get error
+
+###############################################
+def funscope2():
+  
+  global x
+  x=5
+  return x
+funscope2()  
+print(x)                    # this will be ok as be are using global keyword and it will pass the variable globally
+
+############################################################
+x=5
+def func1():
+  x=3
+  return x
+
+func1()
+print(x)  
