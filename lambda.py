@@ -1,4 +1,4 @@
-### nonlocal and global keywords should be used when there is need to modify the varibles in local scope. Also do remember LEGB scope
+### nonlocal and global keywords should be used when there is need to modify the varibles in nested scope. Also do remember LEGB rule
 
 #"""lambda function, For working with lambda function we need to assign it s0me varaible"
 # Example with no variable
