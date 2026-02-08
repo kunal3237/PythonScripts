@@ -35,3 +35,65 @@ owner1.command()
 dog1.bark()
 dog2.bark()
           
+########################################################
+
+"""This example to use inhertance i.e Direct inheritance. employee and customer are 2 classes which have different role in
+bank. But both entities use same login mechanism to lofgin into the portal"""
+
+class Login:
+  def __init__(self):
+    print(f'Welcome in our site')
+    
+  def loggingIn(self,username,password):
+    if password == 0000:
+      print(f'Logged in ..... Welcome')
+    else:
+      print(f'Please check your credentials...')  
+
+class Employee(Login):
+  def __init__(self,name,position):
+    self.name=name
+    self.position=position
+
+  def interestRate(self):
+    if self.position <5:
+      inr_rate=7
+      print(f'Interest rate for this employee is {inr_rate} ')
+    else:
+      inr_rate=9
+      print (f'Interest rate for this employee is {inr_rate}')  
+  def houseing(self):
+    if self.position < 5:
+      print(f'This employee will get HRA of 40000')
+    else:
+      print(f'This employee will get HRA of 20000')
+
+class Customer(Login):
+  def __init__(self,name,contact):
+    super().__init__()              #### When Both and parent have constructor then child use its constructor. 
+    self.name=name                  ## However We can call the parent constructor or other entities using super() method
+    self.contact=contact
+    self.amount=0
+
+  def deposit(self,amount):
+    print(f'{self.name} deposited {amount}')  
+    self.amount=self.amount+amount
+
+  def display_amount(self):
+    print(f'Current Amount in your account is {self.amount}')
+
+employee1=Employee('kunal',3)
+
+# employee1.loggingIn('kunal',0)
+# employee2=Employee('rahul',7)
+# employee1.interestRate()
+# employee1.houseing()
+# employee2.interestRate() 
+# employee2.houseing()
+customer1=Customer('oscar',344234)        
+# customer1.deposit(50000)
+# customer1.display_amount()  
+customer1.loggingIn('sharma',0)
+
+
+##############################################
