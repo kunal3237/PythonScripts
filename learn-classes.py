@@ -97,3 +97,40 @@ customer1.loggingIn('sharma',0)
 
 
 ##############################################
+
+
+"""__ is private to class and can't be accessed or changed directly from outside. To access/change it from outside
+we user getter @property and setter. Methods can also be set private but there is not such getter and setter for methods.
+So if you want to use the private method use it internally """
+class Student:
+  def __init__(self,name,rollno):
+    ###self.name=name      This is problematic as this value can be changed extenrally. So better to encapsulate the attribute or method
+    ### whic you want not to be changed externally
+    self.__name=name    ## THis is name mangling so can't be directly changed
+    self.rollno=rollno
+
+  @property           ### Gettter created here
+  def getName(self):
+    print(f'My name is {self.__name}')  
+
+  @getName.setter
+  def getName(self,name):
+    self.__name=name
+      
+
+  def __study(self):
+    print(f'I am studying {self.__name}')
+
+  def play(self):
+    print(f'I am playing {self.__name}')
+
+  def attendence(self):
+    print(f'Rollno .. {self.rollno} present Mam and {self.__study()}')
+
+student1=Student('kunal',8)
+
+student1.getName      
+student1.getName='sharma'
+student1.getName
+student1.attendence()
+
