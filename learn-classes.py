@@ -150,3 +150,26 @@ student1.study()
 student1._name='sharma'
 student1.study()
 
+###############################################################
+
+class User:
+  def __init__(self,name,email):
+    self.name=name
+    self.email=email
+    self.profile={}
+  def createProfile(self,**kwargs):
+    self.profile.update(kwargs)
+   
+   
+    return 'Profile Created ... '
+
+  def showProfile(self):
+    return  self.profile  
+
+user1=User('kunal','kunal@outlook.com')  
+user1.createProfile(name='kunal',email='kunal@outlook.com',age=40)  
+print(user1.showProfile())
+user2=User('sharma','sharma@outlook.com')  
+user2.createProfile(name='sharma',email='sharma@outlook.com',age=40)  
+print(user2.showProfile())
+print(user1.showProfile())
