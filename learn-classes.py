@@ -133,4 +133,20 @@ student1.getName
 student1.getName='sharma'
 student1.getName
 student1.attendence()
+########################################################
+"""Here we will dscuss protected attributes and methods, Protected attributes are mainly for subclasses and
+message to programers that these are internal"""
+
+class Student:
+  def __init__(self,name,Rollno):
+    self._name=name
+    self.rollno=Rollno
+
+  def study(self):
+    return f'Hi My name is {self._name} and I am studying' 
+
+student1=Student('kunal',9)
+student1.study()
+student1._name='sharma'
+student1.study()
 
