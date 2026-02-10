@@ -44,6 +44,50 @@ print(seller1.tax)
 seller1.tax=4355354     ## once you configure getter and setter. Make sure you use those as attribute not as a function
 print(seller1.tax)
 
+#########################################################################
+
+#### Inhertance Example i.e Direct Inheritance, Inheritance works on "is" relationship. Inheritance represents an IS-A relationship 
+#where the child reuses and extends parent behavior.
+
+class Person:
+  def __init__(self,name,address):
+    self.name=name
+    self.address=address
+
+  def talk(self):
+    return f'{self.name} talk'
+
+  def walk(self):
+    return f'{self.name} walk to {self.address}'
+
+class Login:
+  def __init__(self,username,pasword):
+    self.username=username
+    self.pasword=pasword
+
+  def show_profile(self):
+    return f'{self.username} Logged in .. '
+
+  def add_post(self,post):
+      return f'I am travelling to {post}.. Hurray'
+
+class User(Person):                                   ### User inherit the Person class "User is a Person"
+  def __init__(self, name, address,insta_account):
+    super().__init__(name, address)
+    self.insta_account=insta_account
+
+  def send_friend_request(self,other):
+    return f'I {self.name} am sending request to {other} '
+
+  def account_check(self,login):           #### Login object used here as composition "User has login", Better to pass it with constructor
+    self.login=login
+    return f' I am logged in and showing my profile {login.show_profile()}'  
+
+login1=Login('kunal','9790')
+user1=User('kunal','Palam','1234')   
+print(user1.walk())
+user1.send_friend_request('sharma')
+user1.account_check(login1)
 
 
 
