@@ -90,4 +90,46 @@ user1.send_friend_request('sharma')
 user1.account_check(login1)
 
 
+##############################################################
+#####################
+####Polyphormism Example. Polyphormism means multilple forms. Heer I 'll show you the same methods with different working
+from abc import ABC,abstractmethod
+class Payment(ABC):
+  # def __init__(self):
+  #   # self.name=name
+  #   # self.qty=qty
+  
+  @abstractmethod
+  def pay(self):
+    pass
+
+  def buy(self):
+    pass
+
+
+class creditCard_payment(Payment):
+  def __init__(self):
+    #super().__init__(name,qty)
+    print (f'This is from Credit card')
+
+  def pay(self):
+    return f'Paying it from Credit Card'
+
+class upi_payment(Payment):
+  def __init__(self):
+    #super().__init__(name,qty)
+    print(f'This is from Upi')           
+
+  def pay(self):
+    return f'Paying it from Upi'
+    
+  
+# up1=upi_payment() 
+# cc1=creditCard_payment()
+# up1.pay()
+# cc1.pay()
+payment=[upi_payment(),creditCard_payment()]
+for i in payment:
+  i.pay()
+
 
