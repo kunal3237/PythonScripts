@@ -1,7 +1,7 @@
 #####################################################
 class Seller:
-  def __init__(self,name,address,gstin,myinventory=[]):
-    self.name=name
+  def __init__(self,name,address,gstin,myinventory=[]):      #### This is not good approach as mutable types give problem with default values. It should
+    self.name=name                                            #### Be tested
     self.address=address
     self.gstin=gstin
     self.myinventory=myinventory
