@@ -1,17 +1,6 @@
 ### My own created complex data types in Python
-x=3+7j
-y=4+8j
-# sum=x+y
-# mulxy=x*y
-# print(sum)
-# print(x)
-# print(mulxy)
-# print(x)
-# print(type(x))
-# print(x.imag)
-# print(x.real)
-# con=x.conjugate()
-# print(con)
+
+
 
 class Complex:
   def __init__(self,real,imag):
@@ -28,10 +17,10 @@ class Complex:
   def conjugate(self):
     if self.imag<0:
       imag=-1*self.imag
-      return f'({self.real}+{imag}i)'
+      return Complex(self.real,imag)
     else:
       imag=-1*self.imag
-      return f'({self.real}{imag}i)'
+      return Complex(self.real,imag)
    
   def __add__(self,other):
     real=self.real+other.real
@@ -56,28 +45,24 @@ class Complex:
     else:
         return Complex(real,imag)
 
+  def __truediv__(self,other):
+    den=other.real**2+other.imag**2     
+    othercon=other.conjugate()
+    num=self*othercon 
+    finalcomp=Complex(num.real/den,num.imag/den)
+    return finalcomp
 
-comp1=Complex(3,7)
-# print(comp1)
-# print(comp1.conjugate())
-# print(comp1)
+
+comp1=Complex(-3,-7)
 comp2=Complex(4,8)
-# compsum=comp1+comp2
-# print(compsum)
 # print(comp1)
-#print(comp2)
-# print(comp1.real)
-# print(comp1.imag)
-print(comp1)
-comp12=comp1*comp2
-print(comp12)
-#print(com)
-    # (a + ib) (c + id)
-    # (ac − bd) + i(ad + bc)
-    # (-12+56)+(-24-28)
+# comp12=comp1*comp2
+# print(comp12)
+# print(comp1.conjugate())
+divcomp=comp1/comp2
+print(divcomp)
+
 
 x=3+7j
 y=4+8j
-mulxy=x*y
-# print(comp1)
-print(mulxy)
+print(x/y)
