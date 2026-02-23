@@ -37,11 +37,11 @@ class Complex:
     real=self.real+other.real
     imag=self.imag+other.imag
     if real<0 and imag<0:
-      return f'({real}{imag}i)'
+      return Complex(real,imag)
     elif real>0 and imag<0:    
-      return f'({real}{imag}i)'  
+      return Complex(real,imag)
     else:
-        return f'({real}+{imag}i)'  
+        return Complex(real,imag)
     
 
 
@@ -50,26 +50,27 @@ class Complex:
     real=self.real*other.real - self.imag*other.imag
     imag=self.real*other.imag +self.imag*other.real
     if real<0 and imag<0:
-      return f'({real}{imag}i)'
+      return Complex(real,imag)
     elif real>0 and imag<0:    
-      return f'({real}{imag}i)'  
+      return Complex(real,imag)  
     else:
-        return f'({real}+{imag}i)' 
+        return Complex(real,imag)
 
 
-comp1=Complex(3,-7)
-print(comp1)
+comp1=Complex(3,7)
+# print(comp1)
 # print(comp1.conjugate())
 # print(comp1)
 comp2=Complex(4,8)
-compsum=comp1+comp2
+# compsum=comp1+comp2
 # print(compsum)
 # print(comp1)
-print(comp2)
+#print(comp2)
 # print(comp1.real)
 # print(comp1.imag)
-compmul=comp1*comp2
-print(compmul)
+print(comp1)
+comp12=comp1*comp2
+print(comp12)
 #print(com)
     # (a + ib) (c + id)
     # (ac − bd) + i(ad + bc)
@@ -78,4 +79,5 @@ print(compmul)
 x=3+7j
 y=4+8j
 mulxy=x*y
+# print(comp1)
 print(mulxy)
