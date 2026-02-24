@@ -4,7 +4,7 @@ from abc import ABC,abstractmethod
 class Login(ABC):           ##Abstraction
   
   @abstractmethod           ### Abstractmethod
-  def login(self):
+  def login(self,username,password):
     pass
 
   @abstractmethod           ### Abstractmethod
